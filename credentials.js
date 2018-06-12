@@ -1,8 +1,6 @@
 // Initialize Firebase
 var config = {
-  apiKey: "AIzaSyDyKcKgz_bST086H9VEHAZPY37ZXq3K2DE",
-  databaseURL: "https://yy-apps.firebaseio.com",
-  storageBucket: "",
+  apiKey: "AIzaSyDyKcKgz_bST086H9VEHAZPY37ZXq3K2DE"
 
 };
 firebase.initializeApp(config);
@@ -14,9 +12,6 @@ function initApp() {
     if (user) {
       // User is signed in.
       var displayName = user.displayName;
-      var email = user.email;
-      var emailVerified = user.emailVerified;
-      var photoURL = user.photoURL;
       var isAnonymous = user.isAnonymous;
       var uid = user.uid;
       var providerData = user.providerData;
