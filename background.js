@@ -12,6 +12,11 @@ function initApp() {
 }
 
 function onClickHandler(info, tab) {
+  if (!firebase.auth().currentUser) {
+    alert("Please sign-in first.");
+    return;
+  }
+
   var db = firebase.firestore();
   let createdAt = new Date();
 
