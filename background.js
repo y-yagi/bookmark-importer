@@ -17,7 +17,7 @@ function onClickHandler(info, tab) {
     return;
   }
 
-  var db = firebase.firestore();
+  let db = firebase.firestore();
   let createdAt = new Date();
 
   db.collection("bookmarks").add({
