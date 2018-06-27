@@ -21,6 +21,7 @@ function onClickHandler(info, tab) {
   let createdAt = new Date();
 
   db.collection("bookmarks").add({
+    userId: firebase.auth().currentUser.uid,
     url: info.pageUrl,
     title: tab.title,
     createdAt: new Date()
