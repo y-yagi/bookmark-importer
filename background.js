@@ -3,7 +3,9 @@ var config = {
   projectId: "yy-apps"
 };
 
-firebase.initializeApp(config);
+if (firebase) {
+  firebase.initializeApp(config);
+}
 
 function initApp() {
   firebase.auth().onAuthStateChanged(function(user) {
