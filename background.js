@@ -3,7 +3,7 @@ var config = {
   projectId: "yy-apps"
 };
 
-if (firebase) {
+if (typeof(firebase) !== "undefined" && firebase) {
   firebase.initializeApp(config);
 }
 
