@@ -16,6 +16,7 @@ function initApp() {
 function onClickHandler(info, tab) {
   if (!firebase.auth().currentUser) {
     alert("Please sign-in first.");
+    console.error("Please sign-in first.");
     return;
   }
 
