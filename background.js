@@ -3,7 +3,10 @@ var config = {
   projectId: "yy-apps"
 };
 
-if (typeof(firebase) !== "undefined" && firebase) {
+if (typeof(firebase) === "undefined") {
+  alert("Please sign-in first.");
+  console.error("Please sign-in first.");
+} else {
   firebase.initializeApp(config);
 }
 
